@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% include "./partials/common/styles.njk" %}
+  <title>
+    {{ pageTitle }}
+  </title>
+  <meta name="keywords" content="{{ SEO_keywords }}">
+  <meta name="description" content="{{ SEO_description }}">
+  <meta name="og:title" content="My site {{ page_name }}">
+  <meta name="og:description" content="{{ SEO_description }}">
+</head>
+<body class="{{ bodyClass }}">
+    {% include "./partials/components/header.njk" %}
+  <div class="main">
+    {% block content %}{% endblock %}
+  </div>
+    {% include "./partials/components/footer.njk" %}
+    {% include "./partials/common/scripts.njk" %}
+</body>
+</html>
